@@ -15,8 +15,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
-    this.usersService.authenticateUser(form.value.email, form.value.password)
+    this.usersService.loginUser(form.value.email, form.value.password)
       ? this.router.navigate(['movies'])
       : alert('Incorrect email or password!');
+      console.log(this.usersService.getLoginStatus);
+      
   }
 }

@@ -9,11 +9,19 @@ export class UsersService {
     { email: 'bassem@test.com', password: 'test' },
   ];
 
+  private isLoggedIn = false;
+
   constructor() {}
 
-  authenticateUser(loginMail: string, loginPassword: string): boolean {
-    return this.users.some((user) => {
+  getLoginStatus() {
+    return this.isLoggedIn;
+  }
+
+  loginUser(loginMail: string, loginPassword: string): boolean {
+    this.isLoggedIn = this.users.some((user) => {
       return loginMail === user.email && loginPassword === user.password;
     });
+    return this.isLoggedIn;
   }
+
 }

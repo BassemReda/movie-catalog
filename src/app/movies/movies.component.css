@@ -2,3 +2,7 @@ img {
   max-width: auto;
   max-height: 50%;
 }
+
+.card:hover {
+  cursor: pointer;
+}
