@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 interface ResponseType {
   results: {}[];
+  total_results: number;
 }
 
 @Injectable({

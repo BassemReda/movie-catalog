@@ -1,6 +1,6 @@
 <div class="row p-4">
-  <div class="col col-md-10">
-    <h1>{{ movie.title }}</h1>
+  <div class="col col-md-9 pe-5">
+    <h1>{{ movie.title }}<span class="text-muted ps-4">{{ movie.vote_average }}/10</span></h1>
     <h2 class="text-muted" *ngIf="movie.original_language !== 'en'">
       {{ movie.original_title }}
     </h2>
@@ -17,7 +17,7 @@
     <h4>Storyline:</h4>
     <p>{{ movie.overview }}</p>
   </div>
-  <div class="col col-md-2 ms-auto">
+  <div class="col col-md-3 ms-auto">
     <img
       class="img-thumbnail"
       src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"

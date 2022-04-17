@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'movies',
-    canActivate: [AuthGuardService],
+    // canActivate: [AuthGuardService],
     children: [
       {path: '', component: MoviesComponent},
       {path: ':id', component: MovieDetailsComponent}
