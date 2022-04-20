@@ -1,17 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MoviesAPIService } from '../movies-api.service';
+import { MoviesAPIService } from './movies-api.service';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css'],
+  providers: [MoviesAPIService]
 })
 export class MoviesComponent implements OnInit {
   page = 1;
   movieList: any[] = [];
-  totalResults: number = 0;
+  totalResults = 0;
 
   constructor(
     private moviesAPIService: MoviesAPIService,

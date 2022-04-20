@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-interface ResponseType {
-  results: {}[];
-  total_results: number;
-}
 
 @Injectable({
   providedIn: 'root',
@@ -15,8 +11,8 @@ export class MoviesAPIService {
   constructor(private http: HttpClient) {}
 
   getMovies(page: number) {
-    return this.http.get<ResponseType>(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&page=${page}&language=en-US`
+    return this.http.get<any>(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${this.apiKey}&page=${page}`
     );
   }
 

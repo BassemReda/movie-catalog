@@ -11,3 +11,12 @@ img {
   background-color: #4D4C7D;
   color: white;
 }
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #4D4C7D !important;
+  color: white !important;
+}
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+  background-color: #827397 !important;
+  color: white !important;
+}

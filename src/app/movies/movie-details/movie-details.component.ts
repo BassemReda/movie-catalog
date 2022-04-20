@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { MoviesAPIService } from 'src/app/movies-api.service';
+import { MoviesAPIService } from 'src/app/movies/movies-api.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -32,14 +32,3 @@ export class MovieDetailsComponent implements OnInit {
     return `${Math.floor(this.movie.runtime / 60)}h ${this.movie.runtime % 60}m`;
   }
 }
-/**
- * 3/4 left for text 1/4 right for image
- * title
- * release_date runtime
- * ngif original title
- * tagline
- * overview
- * genres
- * original_language
- * production_country.name
- */
